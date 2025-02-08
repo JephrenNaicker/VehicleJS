@@ -1,0 +1,24 @@
+CREATE DATABASE AZURA;
+GO
+
+USE AZURA;
+GO
+
+CREATE TABLE TM_VEHICLE_INFO
+(
+VehicleID INT Primary KEY IDENTITY(1,1),
+Make varchar(50) NOT NULL,
+Model varchar(4) NOT NULL,
+KM INT NOT NULL,
+Color varchar(25) NOT NULL,
+[Location] varchar(50) NOT NULL,
+[Value] DECIMAL(10,2) NOT NULL
+);
+GO
+
+INSERT INTO TM_VEHICLE_INFO
+VALUES('Toyota','2013',56000,'Sliver','Durban',195712),
+('Hyundai','2010',150000,'Red','PTA',100000)
+GO
+
+SELECT * FROM TM_VEHICLE_INFO
