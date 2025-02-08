@@ -43,6 +43,6 @@ root/
 ```
 
 ## Notes
-
 - Ensure your SQL server is running before starting the backend server.
+- Ensure that you update the credentials for the *Node.js* server in file 'server.cjs'
 
