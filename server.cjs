@@ -38,7 +38,7 @@ try {
 // POST API to Save Vehicle
 app.post('/veh', async (req, res) => {
     try {
-        const { vehicleId, make, model, km, color, location, value } = req.body;
+        const { make, model, km, color, location, value } = req.body;
 
         const pool = await mssql.connect(config);
         const result = await pool.request()
@@ -53,7 +53,7 @@ app.post('/veh', async (req, res) => {
                 VALUES (@Make, @Model, @KM, @Color, @Location, @Value)
             `);
 
-        res.status(201).json({ message: 'Vehicle saved successfully!' });
+        res.status(201).json({ message: 'Vehicle captured successfully!' });
     } catch (err) {
         console.error('Error inserting vehicle:', err);
         res.status(500).json({ error: 'Internal server error' });
